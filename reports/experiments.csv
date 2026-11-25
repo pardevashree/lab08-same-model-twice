@@ -1,0 +1,5 @@
+run,hidden,lr,best_epoch,best_val_mae,final_train_loss,final_val_loss
+main,32,0.001,100,4.378,36.304,43.956
+lr_too_small,32,1e-05,100,10.144,273.764,315.494
+lr_too_large,32,0.5,26,7.849,194.205,221.845
+huge_network,512,0.001,51,2.634,6.954,16.525

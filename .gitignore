@@ -1,0 +1,7 @@
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+.venv/
+.vscode/
+explore.py
+explore_plot.png
