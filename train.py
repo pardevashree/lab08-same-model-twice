@@ -87,7 +87,7 @@ def prepare_data():
     return X, y
 
 
-def run_experiment(data, hidden=32, lr=1e-3, batch_size=64, epochs=EPOCHS, seed = SEED):
+def run_experiment(data, hidden=32, lr=1e-3, batch_size=64, epochs=EPOCHS, seed=SEED):
     X, y = data
     torch.manual_seed(seed)
     datasets = [BikeDataset(X[k], y[k]) for k in ("train", "val", "test")]
