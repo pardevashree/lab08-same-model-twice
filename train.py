@@ -87,12 +87,12 @@ def prepare_data():
     return X, y
 
 
-def run_experiment(data, hidden=32, lr=1e-3, batch_size=64, epochs=EPOCHS):
+def run_experiment(data, hidden=32, lr=1e-3, batch_size=64, epochs=EPOCHS, seed = SEED):
     X, y = data
-    torch.manual_seed(SEED)
+    torch.manual_seed(seed)
     datasets = [BikeDataset(X[k], y[k]) for k in ("train", "val", "test")]
     train_loader, val_loader, test_loader = make_loaders(
-        *datasets, batch_size=batch_size, seed=SEED
+        *datasets, batch_size=batch_size, seed=seed
     )
     model = BikeNet(n_inputs=X["train"].shape[1], hidden=hidden)
     optimizer = torch.optim.Adam(model.parameters(), lr=lr)
