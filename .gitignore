@@ -4,4 +4,6 @@ __pycache__/
 .venv/
 .vscode/
 explore.py
+scratch_check.py
 explore_plot.png
+reports/best_keras.keras
